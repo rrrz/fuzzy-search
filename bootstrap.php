@@ -15,7 +15,6 @@
 \Autoloader::add_classes(array(
 	'Fuzzy_Search\\Fuzzy'                            => __DIR__.'/classes/fuzzy.php',
 	'Fuzzy_Search\\Fuzzy_Address'                    => __DIR__.'/classes/fuzzy/address.php',
-	'Fuzzy_Search\\Fuzzy_Name'                       => __DIR__.'/classes/fuzzy/name.php',
 	'Fuzzy_Search\\Fuzzy_Tell'                       => __DIR__.'/classes/fuzzy/tell.php',
 	'Fuzzy_Search\\Fuzzy_Zip'                        => __DIR__.'/classes/fuzzy/zip.php',
 	'Fuzzy_Search\\Traits_Number'                    => __DIR__.'/classes/traits/number.php',
