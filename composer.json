@@ -1,0 +1,15 @@
+{
+	"name": "rrrz/fuzzy-search",
+	"description" : "FuelPHP fuzzy search plugin - enable your search to be a bit fuzzy."
+	"type": "fuel-package",
+	"homepage": "https://github.com/rrrz/fuzzy-search",
+	"authors": [
+		{
+			"name": "Takeshige Nii",
+			"email": "rznii@rrr-z.co.jp"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}
