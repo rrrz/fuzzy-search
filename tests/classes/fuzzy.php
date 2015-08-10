@@ -109,7 +109,7 @@ class Test_Fuzzy extends \TestCase
 	}
 
 	/**
-	 * キーワードの一致範囲を拡大するメソッド make_sentences($keyword = '', $attribute = '') のテスト
+	 * キーワードの一致範囲を拡大するメソッド make_sentences($keyword = '', $field_name = '') のテスト
 	 *
 	 * @test
 	 */
@@ -145,7 +145,7 @@ class Test_Fuzzy extends \TestCase
 	}
 
 	/**
-	 * where句生成アルゴリズム generate_conditions($keywords, $attributes) のテスト
+	 * where句生成アルゴリズム generate_conditions($keywords, $field_names) のテスト
 	 *
 	 * @test
 	 */
@@ -230,7 +230,7 @@ class Test_Fuzzy extends \TestCase
 	}
 
 	/**
-	 * where句を生成する公開メソッド get_where($keyword = null, $attribute = null) のテスト
+	 * where句を生成する公開メソッド get_where($keyword = null, $field_name = null) のテスト
 	 *
 	 * @test
 	 */

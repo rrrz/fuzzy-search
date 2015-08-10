@@ -36,7 +36,7 @@ class Test_Fuzzy_Address extends \TestCase
 	}
 
 	/**
-	 * 数値表現を多様化するメソッド make_sentences($keyword = '', $attribute = '') のテスト
+	 * 数値表現を多様化するメソッド make_sentences($keyword = '', $field_name = '') のテスト
 	 *
 	 * @test
 	 */

@@ -36,7 +36,7 @@ class Test_Fuzzy_Tell extends \TestCase
 	}
 
 	/**
-	 * 数字の用途ごとに条件文を生成するメソッド make_sentences($keyword = '', $attribute = '') のテスト
+	 * 数字の用途ごとに条件文を生成するメソッド make_sentences($keyword = '', $field_name = '') のテスト
 	 *
 	 * @test
 	 */

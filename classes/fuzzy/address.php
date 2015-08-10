@@ -34,7 +34,7 @@ class Fuzzy_Address extends Fuzzy
 	 * @param string $attribute 属性名
 	 * @return array 各書式のLIKE文を格納した配列
 	 */
-	protected static function make_sentences($keyword = '', $attribute = '')
+	protected static function make_sentences($keyword = '', $field_name = '')
 	{
 		$conditions = array();
 		

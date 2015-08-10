@@ -30,17 +30,17 @@ class Fuzzy_Tell extends Fuzzy
 	 * 数字の用途ごとに条件文を生成
 	 *
 	 * @param string $keyword キーワード語句
-	 * @param string $attribute 属性名
+	 * @param string $field_name 属性名
 	 * @return array 配列形式の条件文
 	 */
-	protected static function make_sentences($keyword = '', $attribute = '')
+	protected static function make_sentences($keyword = '', $field_name = '')
 	{
 		// フォーマットが完全なときはあいまい検索をしない
 		if (preg_match('/^\d{2,4}-\d{2,4}-\d{3,5}$/', $keyword)){
 			
-			return array($attribute, $keyword);
+			return array($field_name, $keyword);
 		}
 		
-		return array($attribute, 'LIKE', '%'.$keyword.'%');
+		return array($field_name, 'LIKE', '%'.$keyword.'%');
 	}
 }

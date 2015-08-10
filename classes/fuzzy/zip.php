@@ -30,10 +30,10 @@ class Fuzzy_Zip extends Fuzzy
 	 * 数字の用途ごとに条件文を生成
 	 *
 	 * @param string $keyword キーワード語句
-	 * @param string $attribute 属性名
+	 * @param string $field_name 属性名
 	 * @return array 配列形式の条件文
 	 */
-	protected static function make_sentences($keyword = '', $attribute = '')
+	protected static function make_sentences($keyword = '', $field_name = '')
 	{
 		// ハイフン無し、ハイフンの位置間違いを訂正
 		$keyword = preg_replace('/[-]/', '', $keyword);
@@ -43,7 +43,7 @@ class Fuzzy_Zip extends Fuzzy
 			
 			$keyword = substr($keyword, 0, 3).'-'.substr($keyword, 3, 4);
 			
-			return array($attribute, $keyword);
+			return array($field_name, $keyword);
 		
 		// 4文字以上ある時はハイフンの位置を変えてLIKE文を作る
 		}elseif (($len = strlen($keyword)) >= 4){
@@ -54,13 +54,13 @@ class Fuzzy_Zip extends Fuzzy
 			
 			for ($i = 0; $i < $ofs; $i++){
 				$kwd = substr($keyword, 0, 3 - $i).'-'.substr($keyword, 3 - $i, strlen($keyword) - (3 - $i));
-				$conditions[] = array($attribute, 'LIKE', '%'.$kwd.'%');
+				$conditions[] = array($field_name, 'LIKE', '%'.$kwd.'%');
 			}
 			
 			return self::associate_or($conditions);
 		}
 		
 		// 3文字以下のときはそのままLIKE文を作る
-		return array($attribute, 'LIKE', '%'.$keyword.'%');
+		return array($field_name, 'LIKE', '%'.$keyword.'%');
 	}
 }
